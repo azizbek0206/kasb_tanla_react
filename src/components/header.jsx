@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 const KasbTanlaApp = () => {
   const [currentPage, setCurrentPage] = useState("home")
@@ -8,6 +8,31 @@ const KasbTanlaApp = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [answers, setAnswers] = useState([])
   const [testResult, setTestResult] = useState(null)
+//   const [data, setData] = useState(null);      // Backenddan kelgan ma'lumot
+//   const [loading, setLoading] = useState(true);  // Yuklanish holati
+//   const [error, setError] = useState(null);      // Xatolik
+
+//   useEffect(() => {
+//     // Backend URL — o‘zingiznikini qo‘ying
+//     fetch("django urlni yozing")
+//       .then((response) => {
+//         if (!response.ok) {
+//           throw new Error("Serverda xatolik yuz berdi");
+//         }
+//         return response.json();
+//       })
+//       .then((jsonData) => {
+//         setData(jsonData);
+//         setLoading(false);
+//       })
+//       .catch((err) => {
+//         setError(err.message);
+//         setLoading(false);
+//       });
+//   }, []);  // Bo‘sh massiv — faqat komponent yuklanganda ishlaydi
+
+//   if (loading) return <p>Yuklanmoqda...</p>;
+//   if (error) return <p>Xatolik: {error}</p>;
 
   // Kasblar ro'yxati
   const careers = [
